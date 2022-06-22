@@ -103,10 +103,9 @@ main {
     background-color: var(--lavender-web);
     border-radius: 5px;
     width: 25vw;
-    height: 50vh;
+    height: 55vh;
     align-self: center;
     justify-self: center;
-    padding: 1rem;
     overflow: auto;
 }
 
@@ -132,6 +131,7 @@ input {
     border: 1px solid lightgray;
     padding-left: 1rem;
     width: 100%;
+    color: var(--space-cadet);
 }
 
 input[type="text"] {
@@ -147,6 +147,7 @@ fieldset {
     grid-template-columns: repeat(4, 1fr);
     align-items: center;
     justify-items: center;
+    margin-top: 1rem;
 }
 
 legend {
