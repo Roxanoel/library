@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,200;1,300;1,700&display=swap');
+
 :root {
     /* Palette */
     --space-cadet: #1D263B;
@@ -6,13 +8,56 @@
     --acid-green: #C3CD3C;
     --straw: #D2D96D;
     --telemagenta: #D4357A;
+
+    /* Fonts */
+    --body-text: 'Montserrat', sans-serif;
+    --header-text: 'DM Serif Display', serif;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 10vh 90vh;
+    width: 100vw;
+    margin: 0;
 }
 
 header {
-    background-color: ;
+    background-color: var(--dark-blue-grey);
+    padding-left: 2rem;
+    display: grid;
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+    align-self: center;
+    font-family: var(--header-text);
+    color: var(--lavender-web);
+    font-weight: 400;
+    font-size: 3rem;
+    letter-spacing: .2rem;
+}
+
+main {
+    background-color: var(--space-cadet);
+    display: grid;
+    grid-template-rows: 10% 90%;
+}
+
+.btn-container {
+    display: grid;
+}
+
+#add-btn {
+    background-color: var(--telemagenta);
+    font-family: var(--body-text);
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: white;
+    border-radius: 5px;
+    border-style: none;
+    align-self: center;
+    justify-self: center;
+    width: fit-content;
+    padding: 1rem 2rem;
 }
