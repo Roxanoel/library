@@ -42,6 +42,12 @@ h1 {
     letter-spacing: .2rem;
 }
 
+h2 {
+    font-family: var(--header-text);
+    font-weight: 500;
+    margin: 0;
+}
+
 main {
     background-color: var(--space-cadet);
     display: grid;
@@ -82,16 +88,84 @@ main {
     font-size: 1.3rem;
 }
 
-#add-btn {
-    background-color: var(--telemagenta);
-    font-family: var(--body-text);
-    font-weight: 600;
-    font-size: 1.3rem;
-    color: white;
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    display: grid;
+}
+
+.modal-content {
+    background-color: var(--lavender-web);
     border-radius: 5px;
-    border-style: none;
+    width: 25vw;
+    height: 50vh;
+    align-self: center;
+    justify-self: center;
+    padding: 1rem;
+    overflow: auto;
+}
+
+.modal form {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: 100%;
+    overflow: auto;
+    align-items: center;
+    justify-items: center;
+}
+
+.labeled-input {
+    display:flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+input {
+    height: 2rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+}
+
+fieldset {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 1rem 3rem;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+legend {
+    grid-column: 1 / -1;
+    padding: 0;
+}
+
+#submit-btn {
+    padding: 1rem 4rem;
+    margin-top: .5rem;
+}
+
+#add-btn {
+
+}
+
+button {
     align-self: center;
     justify-self: center;
     width: fit-content;
     padding: 1rem 2rem;
+    border-radius: 5px;
+    border-style: none;
+    font-weight: 600;
+    font-size: 1.3rem;
+    background-color: var(--telemagenta);
+    color: white;
 }

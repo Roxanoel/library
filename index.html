@@ -9,6 +9,37 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div id="add-book" class="modal">
+        <div class="modal-content">
+            <form>
+                <h2>New book</h2>
+                <div class="labeled-input">
+                    <label for="title">Title:</label>
+                    <input name="title" type="text" id="title">
+                </div>
+                <div class="labeled-input">
+                    <label for="author">Author:</label>
+                    <input name="author" type="text" id="author">
+                </div>
+                <div class="labeled-input">
+                    <label for="pages">Pages:</label>
+                    <input name="pages" type="number" id="pages">
+                </div>
+                <div class="labeled-fieldset">
+                    <fieldset>
+                        <legend>Have you read it yet?</legend>
+                        <label for="read">Yes</label>
+                        <input name="was-read" value="1" id="read" type="radio">
+                        <label for="unread">No</label>
+                        <input name="was-read" value="0" id="unread" type="radio">
+                    </fieldset>
+                </div>
+                <div class="btn-container">
+                    <button id="submit-btn">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
     <header>
         <h1>Your Library.</h1>
     </header>
