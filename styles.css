@@ -48,6 +48,19 @@ main {
     display: grid;
 }
 
+.books-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.card {
+    border-radius: 10px;
+    height: 30vh;
+    background-color: var(--lavender-web);
+}
+
 #add-btn {
     background-color: var(--telemagenta);
     font-family: var(--body-text);
