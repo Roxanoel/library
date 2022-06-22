@@ -67,6 +67,7 @@ main {
     display: grid;
     grid-template-rows: repeat(4, 1fr);
     padding: 0 2rem;
+    border: .5rem solid var(--acid-green);
 }
 
 .title {
