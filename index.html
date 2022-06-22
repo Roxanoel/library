@@ -23,7 +23,7 @@
                 </div>
                 <div class="labeled-input">
                     <label for="pages">Pages:</label>
-                    <input name="pages" type="number" id="pages">
+                    <input name="pages" type="text" id="pages" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
                 </div>
                 <div class="labeled-fieldset">
                     <fieldset>
