@@ -1,0 +1,18 @@
+:root {
+    /* Palette */
+    --space-cadet: #1D263B;
+    --dark-blue-grey: #5C6784;
+    --lavender-web: #EEEEFF;
+    --acid-green: #C3CD3C;
+    --straw: #D2D96D;
+    --telemagenta: #D4357A;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: ;
+}
