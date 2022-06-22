@@ -12,6 +12,9 @@
     /* Fonts */
     --body-text: 'Montserrat', sans-serif;
     --header-text: 'DM Serif Display', serif;
+
+    /* Default styles */
+    font-family: var(--body-text);
 }
 
 body {
@@ -59,6 +62,21 @@ main {
     border-radius: 10px;
     height: 30vh;
     background-color: var(--lavender-web);
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    padding: 0 2rem;
+}
+
+.title {
+    font-size: 1.7rem;
+    font-family: var(--header-text);
+    align-self: end;
+    padding-bottom: .5rem;
+}
+
+.author {
+    font-weight: 500;
+    font-size: 1.3rem;
 }
 
 #add-btn {
