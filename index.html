@@ -18,26 +18,21 @@
                 </div>
                 <div class="labeled-input">
                     <label for="title">Title:</label>
-                    <input name="title" type="text" id="title" 
-                    minlength="3" maxlength="30" required>
+                    <input name="title" type="text" id="title">
                 </div>
                 <div class="labeled-input">
                     <label for="author">Author:</label>
-                    <input name="author" type="text" id="author" 
-                    oninput="this.value = this.value.replace(/[0-9.]/g, '')"
-                    minlength="3" maxlength="30" required>
+                    <input name="author" type="text" id="author" oninput="this.value = this.value.replace(/[0-9.]/g, '')">
                 </div>
                 <div class="labeled-input">
                     <label for="pages">Pages:</label>
-                    <input name="pages" type="text" id="pages" 
-                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
-                    minlength="1" maxlength="5" required>
+                    <input name="pages" type="text" id="pages" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
                 </div>
                 <div class="labeled-fieldset">
                     <fieldset>
                         <legend>Have you read it yet?</legend>
                         <label for="read">Yes</label>
-                        <input name="was-read" value="true" id="read" type="radio" required>
+                        <input name="was-read" value="true" id="read" type="radio">
                         <label for="unread">No</label>
                         <input name="was-read" value="false" id="unread" type="radio">
                     </fieldset>

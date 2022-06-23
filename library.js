@@ -9,12 +9,12 @@ const addBookForm = document.querySelector("#add-book form");
 addBookBtn.addEventListener("click", openModal);
 formCloseBtn.addEventListener("click", closeModal);
 addBookForm.addEventListener("submit", (event) => {
-    //event.preventDefault();
+    event.preventDefault();
     addBookToLibrary(
-        document.getElementById("title").value,
-        document.getElementById("author").value,
-        document.getElementById("pages").value,
-        (document.getElementById("was-read").value === "true") ? true : false
+        addBookForm.elements["title"].value,
+        addBookForm.elements["author"].value,
+        addBookForm.elements["pages"].value,
+        (addBookForm.elements["was-read"].value === "true") ? true : false
     )
     displayBooks();
     closeModal();
