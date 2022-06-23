@@ -50,6 +50,7 @@ function displayBooks() {
     
     for(let i = 0; i < myLibrary.length; i++) {
         const card = createElementWithClass("div", "card", "");
+        card.setAttribute("data-index", i);
         booksContainer.appendChild(card);
 
         const title = createElementWithClass("div", "title", myLibrary[i].title);
