@@ -4,9 +4,21 @@ const booksContainer = document.querySelector("#books-container");
 const addBookBtn = document.querySelector("#add-btn");
 const addBookModal = document.querySelector("#add-book");
 const formCloseBtn = document.querySelector("form .close-button");
+const addBookForm = document.querySelector("#add-book form");
 
 addBookBtn.addEventListener("click", openModal);
 formCloseBtn.addEventListener("click", closeModal);
+addBookForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    addBookToLibrary(
+        addBookForm.elements["title"].value,
+        addBookForm.elements["author"].value,
+        addBookForm.elements["pages"].value,
+        addBookForm.elements["was-read"].value /*This might come out 
+        as string instead of bool, to verify...*/
+    )
+    closeModal();
+})
 
 function openModal() {
     addBookModal.classList.add("modal-open");
