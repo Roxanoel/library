@@ -22,7 +22,7 @@
                 </div>
                 <div class="labeled-input">
                     <label for="author">Author:</label>
-                    <input name="author" type="text" id="author">
+                    <input name="author" type="text" id="author" oninput="this.value = this.value.replace(/[0-9.]/g, '')">
                 </div>
                 <div class="labeled-input">
                     <label for="pages">Pages:</label>
