@@ -60,7 +60,7 @@ main {
 
 #books-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     padding: 2rem;
     gap: 2rem;
     overflow: auto;
@@ -71,8 +71,7 @@ main {
     height: 30vh;
     background-color: var(--lavender-web);
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    padding: 0 2rem;
+    grid-template-rows: auto repeat(4, 1fr);
     border: .5rem solid var(--acid-green);
 }
 
@@ -86,6 +85,11 @@ main {
 .author {
     font-weight: 500;
     font-size: 1.3rem;
+}
+
+.title, .author, .pages, .was-read {
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .modal {

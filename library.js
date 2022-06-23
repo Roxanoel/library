@@ -80,4 +80,4 @@ function createElementWithClass(tag, className, content) {
     return element;
 }
 
-displayBooks();
+//displayBooks();
