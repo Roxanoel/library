@@ -72,6 +72,7 @@ main {
     background-color: var(--lavender-web);
     display: grid;
     grid-template-rows: auto repeat(4, 1fr);
+    grid-template-columns: 100%;
     border: .5rem solid var(--acid-green);
 }
 
@@ -90,6 +91,7 @@ main {
 .title, .author, .pages, .was-read {
     padding-left: 10%;
     padding-right: 10%;
+    overflow-wrap: normal;
 }
 
 .modal {
