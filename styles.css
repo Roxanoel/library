@@ -221,9 +221,9 @@ button {
 }
 
 .card button.true {
-    color: #5e853a;
+    background-color: #5e853a;
 }
 
 .card button.false {
-    color: #b1263d;
+    background-color: #b1263d;
 }
