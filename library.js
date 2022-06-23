@@ -66,12 +66,17 @@ function displayBooks() {
         card.appendChild(pages);
         card.appendChild(wasRead);
 
-        removeButton.addEventListener("click", deleteBook); // TESTING
+        removeButton.addEventListener("click", deleteBook); 
     }
 }
 
 function deleteBook(event) {
-    console.log(`Deleting book from card with data index of ${event.target.parentElement.dataset.index}`);
+    // Gets index from the card
+    const index = event.target.parentElement.dataset.index;
+    // Removes the corresponding object from the array
+    myLibrary.splice(index, 1);
+    // Re-generates the display
+    displayBooks();
 }
 
 function clearLibraryDisplay() {
