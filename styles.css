@@ -90,6 +90,7 @@ main {
 .title, .author, .pages, .was-read {
     padding-left: 10%;
     padding-right: 10%;
+    overflow-wrap: normal;
 }
 
 .modal {
