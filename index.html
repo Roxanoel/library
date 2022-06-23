@@ -18,21 +18,25 @@
                 </div>
                 <div class="labeled-input">
                     <label for="title">Title:</label>
-                    <input name="title" type="text" id="title">
+                    <input name="title" type="text" id="title" required>
                 </div>
                 <div class="labeled-input">
                     <label for="author">Author:</label>
-                    <input name="author" type="text" id="author" oninput="this.value = this.value.replace(/[0-9.]/g, '')">
+                    <input name="author" type="text" id="author" 
+                    oninput="this.value = this.value.replace(/[0-9.]/g, '')"
+                    required>
                 </div>
                 <div class="labeled-input">
                     <label for="pages">Pages:</label>
-                    <input name="pages" type="text" id="pages" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                    <input name="pages" type="text" id="pages" 
+                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                    required>
                 </div>
                 <div class="labeled-fieldset">
                     <fieldset>
                         <legend>Have you read it yet?</legend>
                         <label for="read">Yes</label>
-                        <input name="was-read" value="true" id="read" type="radio">
+                        <input name="was-read" value="true" id="read" type="radio" required>
                         <label for="unread">No</label>
                         <input name="was-read" value="false" id="unread" type="radio">
                     </fieldset>
