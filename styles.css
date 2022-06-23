@@ -96,7 +96,7 @@ main {
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.4);
-    /*display: none;*/
+    display: none;
 }
 
 .modal-content {
@@ -120,6 +120,13 @@ main {
     grid-column: -2 / -1;
     justify-self: end;
     align-self: top;
+}
+
+/* The .modal-open class will be added to the modal
+when it's opened, using JavaScript, and removed when
+it is closed. */
+.modal.modal-open {
+    display: block;
 }
 
 .modal form {
