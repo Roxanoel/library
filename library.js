@@ -17,6 +17,7 @@ addBookForm.addEventListener("submit", (event) => {
         addBookForm.elements["was-read"].value /*This might come out 
         as string instead of bool, to verify...*/
     )
+    displayBooks();
     closeModal();
 })
 
@@ -69,3 +70,5 @@ function createElementWithClass(tag, className, content) {
     element.textContent = content;
     return element;
 }
+
+displayBooks();
