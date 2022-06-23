@@ -222,8 +222,10 @@ button {
 
 .card button.true {
     background-color: #5e853a;
+    content: "Already read";
 }
 
 .card button.false {
     background-color: #b1263d;
+    content: "Not yet read";
 }

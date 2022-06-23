@@ -59,6 +59,7 @@ function displayBooks() {
         const wasRead = createElementWithClass("button", "was-read", 
         myLibrary[i].wasRead ? "Was read" : "Not read yet");
         wasRead.classList.add(myLibrary[i].wasRead.toString());
+        wasRead.addEventListener("click", toggleReadStatus)
 
         card.appendChild(removeButton);
         card.appendChild(title);
@@ -68,6 +69,18 @@ function displayBooks() {
 
         removeButton.addEventListener("click", deleteBook); 
     }
+}
+
+function toggleReadStatus(event) {
+    const index = event.target.parentElement.dataset.index;
+    // Removes previous style
+    event.target.classList.remove(myLibrary[index].wasRead.toString())
+    // "Reverses" the value of the bool
+    myLibrary[index].wasRead = !(myLibrary[index].wasRead);
+    // Updates class list to match
+    event.target.classList.add(myLibrary[index].wasRead.toString())
+    // Updates message
+    event.target.textContent = myLibrary[index].wasRead ? "Was read" : "Not read yet";
 }
 
 function deleteBook(event) {
