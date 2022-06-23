@@ -53,17 +53,25 @@ function displayBooks() {
         card.setAttribute("data-index", i);
         booksContainer.appendChild(card);
 
+        const removeButton = createElementWithClass("div", "close-button", "");
         const title = createElementWithClass("div", "title", myLibrary[i].title);
         const author = createElementWithClass("div", "author", myLibrary[i].author);
         const pages = createElementWithClass("div", "pages", `${myLibrary[i].pages.toString()} pages`);
         const wasRead = createElementWithClass("div", "was-read", 
         myLibrary[i].wasRead ? "Was read" : "Not read yet");
 
+        card.appendChild(removeButton);
         card.appendChild(title);
         card.appendChild(author);
         card.appendChild(pages);
         card.appendChild(wasRead);
+
+        removeButton.addEventListener("click", deleteBook); // TESTING
     }
+}
+
+function deleteBook(event) {
+    console.log(`Deleting book from card with data index of ${event.target.parentElement.dataset.index}`);
 }
 
 function clearLibraryDisplay() {
@@ -80,4 +88,4 @@ function createElementWithClass(tag, className, content) {
     return element;
 }
 
-//displayBooks();
+displayBooks();
