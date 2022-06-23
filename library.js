@@ -14,8 +14,7 @@ addBookForm.addEventListener("submit", (event) => {
         addBookForm.elements["title"].value,
         addBookForm.elements["author"].value,
         addBookForm.elements["pages"].value,
-        addBookForm.elements["was-read"].value /*This might come out 
-        as string instead of bool, to verify...*/
+        (addBookForm.elements["was-read"].value === "true") ? true : false
     )
     displayBooks();
     closeModal();
