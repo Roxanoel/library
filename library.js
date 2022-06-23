@@ -46,6 +46,8 @@ function addBookToLibrary(title, author, pages, wasRead) {
 }
 
 function displayBooks() {
+    clearLibraryDisplay();
+    
     for(let i = 0; i < myLibrary.length; i++) {
         const card = createElementWithClass("div", "card", "");
         booksContainer.appendChild(card);
@@ -60,6 +62,12 @@ function displayBooks() {
         card.appendChild(author);
         card.appendChild(pages);
         card.appendChild(wasRead);
+    }
+}
+
+function clearLibraryDisplay() {
+    while (booksContainer.lastChild) {
+        booksContainer.lastChild.remove();
     }
 }
 
