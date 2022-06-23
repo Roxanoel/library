@@ -56,7 +56,7 @@ function displayBooks() {
         const title = createElementWithClass("div", "title", myLibrary[i].title);
         const author = createElementWithClass("div", "author", myLibrary[i].author);
         const pages = createElementWithClass("div", "pages", `${myLibrary[i].pages.toString()} pages`);
-        const wasRead = createElementWithClass("div", "was-read", 
+        const wasRead = createElementWithClass("button", "was-read", 
         myLibrary[i].wasRead ? "Was read" : "Not read yet");
 
         card.appendChild(removeButton);

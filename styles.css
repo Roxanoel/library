@@ -215,3 +215,15 @@ button {
     background-color: var(--telemagenta);
     color: white;
 }
+
+.card button {
+    width: 85%;
+}
+
+.card button.true {
+    color: #5e853a;
+}
+
+.card button.false {
+    color: #b1263d;
+}
