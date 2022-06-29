@@ -28,7 +28,7 @@ function closeModal() {
     addBookModal.classList.remove("modal-open");
 }
 
-function Book(title, author, pages, wasRead) {
+/* function Book(title, author, pages, wasRead) {
     this.title = title;
     this.author = author;
     this.pages = pages;
@@ -36,6 +36,36 @@ function Book(title, author, pages, wasRead) {
 
     this.info = function() {
         return `${title} by ${author}, ${pages} pages, ${wasRead ? "read" : "not read yet"}`;
+    }
+} */
+
+class Book {
+    #title;
+    #author;
+    #pages;
+    #wasRead;
+
+    constructor(title, author, pages, wasRead) {
+    this.#title = title;
+    this.#author = author;
+    this.#pages = pages;
+    this.#wasRead = wasRead;
+    }
+
+    get title() {
+        return this.#title;
+    }
+
+    get author() {
+        return this.#author;
+    }
+
+    get pages() {
+        return this.#pages;
+    }
+
+    get wasRead() {
+        return this.#wasRead;
     }
 }
 
